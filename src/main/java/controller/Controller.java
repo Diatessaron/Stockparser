@@ -1,11 +1,8 @@
 package controller;
 
 import model.Model;
-import model.Stock;
 import model.strategy.Strategy;
 import view.View;
-
-import java.util.List;
 
 public class Controller {
     private View view;

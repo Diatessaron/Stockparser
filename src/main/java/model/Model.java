@@ -56,15 +56,8 @@ public class Model {
         return result;
     }
 
-    public Stock getStockMarketIndex(Strategy strategy) {
-
-
-        return null;
-    }
-
-    public Stock getStockByString(String name) {
-
-
-        return null;
+    public Stock getStockByString(Strategy strategy, String name) {
+        return getAllStocks(strategy).stream().filter(stock -> stock.getName().toLowerCase().contains(name.toLowerCase()))
+                .collect(Collectors.toList()).get(0);
     }
 }

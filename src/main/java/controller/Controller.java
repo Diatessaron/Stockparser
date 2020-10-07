@@ -19,11 +19,7 @@ public class Controller {
         view.showAllStocks(model.getAllStocks(strategy));
     }
 
-    public void getStockMarketIndex(){
-        view.showOneStock(model.getStockMarketIndex(strategy));
-    }
-
     public void getStockByString(String name){
-        view.showOneStock(model.getStockByString(name));
+        view.showOneStock(model.getStockByString(strategy, name));
     }
 }

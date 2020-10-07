@@ -13,7 +13,7 @@ public class MainClass {
         Controller controller = new Controller(view, model, strategy);
 
         controller.getAllStocks();
-//        controller.getStockMarketIndex();
-//        controller.getStockByString("Apple");
+        controller.getStockMarketIndex();
+        controller.getStockByString("Apple");
     }
 }

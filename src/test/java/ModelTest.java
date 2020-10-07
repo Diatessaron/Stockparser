@@ -4,6 +4,8 @@ import model.strategy.NASDAQStrategy;
 import model.strategy.Strategy;
 import org.junit.Test;
 
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 public class ModelTest {
@@ -11,12 +13,14 @@ public class ModelTest {
     private Strategy strategy = new NASDAQStrategy();
 
     @Test
-    public void testGetAllStocks(){
+    public void testGetAllStocksBySize(){
+        List<Stock> actualStocks = model.getAllStocks(strategy);
 
+        assertEquals(102, actualStocks.size());
     }
 
     @Test
-    public void testGetStockMarketIndex(){
+    public void testGetStockMarketIndexByName(){
         Stock stock = new Stock("NSDQ", "NASDAQ", 123, 22, 11);
         Stock testStock = model.getStockMarketIndex(strategy);
 

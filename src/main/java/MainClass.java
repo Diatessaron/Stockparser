@@ -12,8 +12,8 @@ public class MainClass {
         Strategy strategy = new NASDAQStrategy();
         Controller controller = new Controller(view, model, strategy);
 
-        controller.getStockMarketIndex();
         controller.getAllStocks();
-        controller.getStockByString("Apple");
+//        controller.getStockMarketIndex();
+//        controller.getStockByString("Apple");
     }
 }

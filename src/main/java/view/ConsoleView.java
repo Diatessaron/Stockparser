@@ -6,6 +6,7 @@ import java.util.List;
 
 public class ConsoleView implements View{
     public void showAllStocks(List<Stock> stocks) {
+        System.out.println("Stocks: ");
         stocks.forEach(System.out::println);
     }
 

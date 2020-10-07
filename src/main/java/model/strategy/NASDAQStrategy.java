@@ -1,7 +1,7 @@
 package model.strategy;
 
 public class NASDAQStrategy implements Strategy{
-    private String URLString = "https://www.nasdaq.com/market-activity/quotes/nasdaq-ndx-index";
+    private String URLString = "https://www.slickcharts.com/nasdaq100";
 
     @Override
     public String getURLString() {

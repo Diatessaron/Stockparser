@@ -1,25 +1,25 @@
 package controller;
 
 import model.Model;
-import model.strategy.Strategy;
+import model.command.Command;
 import view.View;
 
 public class Controller {
     private View view;
     private Model model;
-    private Strategy strategy;
+    private Command command;
 
-    public Controller(View view, Model model, Strategy strategy) {
+    public Controller(View view, Model model, Command command) {
         this.view = view;
         this.model = model;
-        this.strategy = strategy;
+        this.command = command;
     }
 
     public void getAllStocks(){
-        view.showAllStocks(model.getAllStocks(strategy));
+        view.showAllStocks(model.getAllStocks(command));
     }
 
     public void getStockByString(String name){
-        view.showOneStock(model.getStockByString(strategy, name));
+        view.showOneStock(model.getStockByString(command, name));
     }
 }

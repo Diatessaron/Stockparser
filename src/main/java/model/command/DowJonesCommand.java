@@ -1,6 +1,6 @@
-package model.strategy;
+package model.command;
 
-public class DowJonesStrategy implements Strategy{
+public class DowJonesCommand implements Command {
     private String URLString = "https://www.slickcharts.com/dowjones";
 
     @Override

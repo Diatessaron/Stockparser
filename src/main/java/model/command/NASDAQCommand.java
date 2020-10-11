@@ -1,6 +1,6 @@
-package model.strategy;
+package model.command;
 
-public class NASDAQStrategy implements Strategy{
+public class NASDAQCommand implements Command {
     private String URLString = "https://www.slickcharts.com/nasdaq100";
 
     @Override

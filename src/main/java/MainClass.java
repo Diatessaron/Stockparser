@@ -1,18 +1,11 @@
 import controller.Controller;
-import model.Model;
-import model.command.DowJonesCommand;
-import model.command.NASDAQCommand;
-import model.command.Command;
-import view.ConsoleView;
-import view.View;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class MainClass {
     public static void main(String[] args) {
-        View view = new ConsoleView();
-        Model model = new Model();
-        Command command = new NASDAQCommand();
-//        Command command = new DowJonesCommand();
-        Controller controller = new Controller(view, model, command);
+        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+        Controller controller = context.getBean(Controller.class);
 
         controller.getStockByString("Apple");
         int i=0;

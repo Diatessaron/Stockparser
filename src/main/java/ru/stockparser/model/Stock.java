@@ -1,4 +1,4 @@
-package model;
+package ru.stockparser.model;
 
 import java.util.Objects;
 

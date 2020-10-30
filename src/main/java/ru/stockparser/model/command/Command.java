@@ -1,6 +1,6 @@
-package model.command;
+package ru.stockparser.model.command;
 
-import model.Stock;
+import ru.stockparser.model.Stock;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;

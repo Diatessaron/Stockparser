@@ -1,4 +1,4 @@
-package model.command;
+package ru.stockparser.model.command;
 
 public class DowJonesCommand implements Command {
     private String URLString = "https://www.slickcharts.com/dowjones";

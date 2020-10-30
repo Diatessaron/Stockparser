@@ -1,6 +1,6 @@
-package view;
+package ru.stockparser.view;
 
-import model.Stock;
+import ru.stockparser.model.Stock;
 
 import java.util.List;
 

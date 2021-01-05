@@ -1,23 +1,34 @@
-package ru.stockparser.model;
+package ru.fazlyev.stockparser.domain;
 
+import javax.persistence.*;
 import java.util.Objects;
 
+@Entity
+@Table(name = "stock")
 public class Stock {
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+    @Column(name = "symbol")
     private String symbol;
+    @Column(name = "name")
     private String name;
+    @Column(name = "price")
     private double price;
+    @Column(name = "change")
     private String change;
 
-    public Stock(int id, String symbol, String name, double price, String change) {
-        this.id=id;
+    public Stock(){}
+
+    public Stock(long id, String symbol, String name, double price, String change) {
+        this.id = id;
         this.symbol = symbol;
         this.name = name;
         this.price = price;
         this.change = change;
     }
 
-    public int getId(){
+    public long getId(){
         return id;
     }
 

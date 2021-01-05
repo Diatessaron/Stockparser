@@ -1,0 +1,6 @@
+spting:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+  datasource:
+    url: jdbc:h2:mem:testdb

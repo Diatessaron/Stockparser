@@ -1,6 +1,6 @@
-package ru.stockparser.model.command;
+package ru.fazlyev.stockparser.service;
 
-import ru.stockparser.model.Stock;
+import ru.fazlyev.stockparser.domain.Stock;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
@@ -10,7 +10,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public interface Command {
+public interface StockService {
     String getURLString();
 
     default List<Stock> getAllStocks(){
@@ -53,7 +53,7 @@ public interface Command {
             e.printStackTrace();
         }
 
-        result = result.stream().sorted(Comparator.comparingInt(Stock::getId)).collect(Collectors.toList());
+        result = result.stream().sorted(Comparator.comparingLong(Stock::getId)).collect(Collectors.toList());
 
         return result;
     }
